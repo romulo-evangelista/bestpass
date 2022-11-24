@@ -17,19 +17,19 @@ export const PasswordDetails = ({
       </Text>
       <View style={styles.details}>
         <Text style={haveLowerCase ? styles.textHighlight : styles.text}>
-          {haveLowerCase && 'AAA '}Minúscula
+          {haveLowerCase && '✓ '}Minúscula
         </Text>
         <Text style={styles.text}> | </Text>
         <Text style={haveUpperCase ? styles.textHighlight : styles.text}>
-          {haveUpperCase && 'AAA '}Maiúscula
+          {haveUpperCase && '✓ '}Maiúscula
         </Text>
         <Text style={styles.text}> | </Text>
         <Text style={haveNumbers ? styles.textHighlight : styles.text}>
-          {haveNumbers && 'AAA '}Números
+          {haveNumbers && '✓ '}Números
         </Text>
         <Text style={styles.text}> | </Text>
         <Text style={haveSymbols ? styles.textHighlight : styles.text}>
-          {haveSymbols && 'AAA '}Símbolos
+          {haveSymbols && '✓ '}Símbolos
         </Text>
       </View>
     </>
