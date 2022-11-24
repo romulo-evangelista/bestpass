@@ -1,10 +1,13 @@
-import React from 'react';
-import {SafeAreaView, ScrollView, Text, TextInput, View} from 'react-native';
-import CheckBox from '@react-native-community/checkbox';
+import React, {useState} from 'react';
+import {SafeAreaView, ScrollView, Text, View} from 'react-native';
+import {CheckBoxContainer, PasswordDetails, PasswordInput} from './components';
 
 import {styles} from './styles';
 
 const TestPass = () => {
+  const [password, setPassword] = useState('');
+  const [visibility, setVisibility] = useState(true);
+
   return (
     <SafeAreaView style={styles.safeArea}>
       <ScrollView
@@ -19,33 +22,21 @@ const TestPass = () => {
             </Text>
           </View>
           <View style={styles.section}>
-            <TextInput
-              onChangeText={() => {}}
-              value=""
-              style={styles.password}
-              secureTextEntry={true}
+            <PasswordInput
+              password={password}
+              setPassword={setPassword}
+              visibility={visibility}
             />
             <Text style={styles.text}>
               Sua senha pode ter no máximo 18 caracteres
             </Text>
-            <View style={styles.checkboxContainer}>
-              <CheckBox
-                value={true}
-                boxType="square"
-                onValueChange={() => {}}
-                onCheckColor="white"
-                onTintColor="white"
-              />
-              <Text style={styles.textBold}> Visualizar senha inserida</Text>
-            </View>
+            <CheckBoxContainer
+              visibility={visibility}
+              setVisibility={setVisibility}
+            />
           </View>
           <View style={styles.section}>
-            <Text style={styles.text}>
-              No momento a senha tem 0 caracteres e possui:
-            </Text>
-            <Text style={styles.text}>
-              Minúscula | Maiúscula | Números | Símbolos
-            </Text>
+            <PasswordDetails password={password} />
           </View>
           <View style={styles.footer}>
             <Text style={styles.text}>

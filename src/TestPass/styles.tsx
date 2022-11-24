@@ -23,25 +23,6 @@ export const styles = StyleSheet.create({
     marginTop: '50%',
   },
 
-  // Password Styles
-  password: {
-    height: 40,
-    width: '90%',
-    borderWidth: 2,
-    borderColor: 'white',
-    borderRadius: 10,
-    color: 'white',
-  },
-
-  // CheckBox Styles
-  checkboxContainer: {
-    flex: 2,
-    flexDirection: 'row',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    paddingTop: '3%',
-  },
-
   // Text Styles
   title: {
     fontFamily: 'Staatliches',
@@ -52,13 +33,6 @@ export const styles = StyleSheet.create({
     paddingTop: '3%',
     textAlign: 'center',
     fontFamily: 'Lato',
-    fontSize: 13,
-    color: 'white',
-  },
-  textBold: {
-    paddingLeft: '3%',
-    fontFamily: 'Lato',
-    fontWeight: 'bold',
     fontSize: 13,
     color: 'white',
   },
