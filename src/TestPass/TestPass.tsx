@@ -7,6 +7,10 @@ import {styles} from './styles';
 const TestPass = () => {
   const [password, setPassword] = useState('');
   const [visibility, setVisibility] = useState(true);
+  const [haveLowerCase, setHaveLowerCase] = useState(false);
+  const [haveUpperCase, setHaveUpperCase] = useState(false);
+  const [haveNumbers, setHaveNumbers] = useState(false);
+  const [haveSymbols, setHaveSymbols] = useState(false);
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -26,6 +30,10 @@ const TestPass = () => {
               password={password}
               setPassword={setPassword}
               visibility={visibility}
+              setHaveLowerCase={setHaveLowerCase}
+              setHaveUpperCase={setHaveUpperCase}
+              setHaveNumbers={setHaveNumbers}
+              setHaveSymbols={setHaveSymbols}
             />
             <Text style={styles.text}>
               Sua senha pode ter no máximo 18 caracteres
@@ -36,7 +44,13 @@ const TestPass = () => {
             />
           </View>
           <View style={styles.section}>
-            <PasswordDetails password={password} />
+            <PasswordDetails
+              password={password}
+              haveLowerCase={haveLowerCase}
+              haveUpperCase={haveUpperCase}
+              haveNumbers={haveNumbers}
+              haveSymbols={haveSymbols}
+            />
           </View>
           <View style={styles.footer}>
             <Text style={styles.text}>
