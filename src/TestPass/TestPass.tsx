@@ -1,19 +1,8 @@
 import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  Text,
-  TextInput,
-  View,
-} from 'react-native';
+import {SafeAreaView, ScrollView, Text, TextInput, View} from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 
 import {styles} from './styles';
-
-// const onChangeText = (text: String) => {
-//   return text;
-// };
 
 const TestPass = () => {
   return (
