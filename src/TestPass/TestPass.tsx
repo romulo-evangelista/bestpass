@@ -5,6 +5,7 @@ import {
   PasswordDetails,
   PasswordInput,
   PasswordPower,
+  PasswordValidity,
 } from './components';
 
 import {styles} from './styles';
@@ -16,6 +17,7 @@ const TestPass = () => {
   const [haveUpperCase, setHaveUpperCase] = useState(false);
   const [haveNumbers, setHaveNumbers] = useState(false);
   const [haveSymbols, setHaveSymbols] = useState(false);
+  const [colorValidation, setColorValidation] = useState('');
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -31,6 +33,7 @@ const TestPass = () => {
               haveUpperCase={haveUpperCase}
               haveNumbers={haveNumbers}
               haveSymbols={haveSymbols}
+              setColorValidation={setColorValidation}
             />
           </View>
           <View style={styles.section}>
@@ -60,11 +63,15 @@ const TestPass = () => {
               haveSymbols={haveSymbols}
             />
           </View>
-          <View style={styles.footer}>
-            <Text style={styles.text}>
-              Sua senha nunca será armazenada por aqui!
-            </Text>
-          </View>
+          {password.length > 0 ? (
+            <PasswordValidity color={colorValidation} />
+          ) : (
+            <View style={styles.footer}>
+              <Text style={styles.text}>
+                Sua senha nunca será armazenada por aqui!
+              </Text>
+            </View>
+          )}
         </View>
       </ScrollView>
     </SafeAreaView>

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Text} from 'react-native';
+import {colorValidations} from '../../validations/colorValidations';
 
 import {styles} from './styles';
-import {getValidations} from './validations/getValidations';
 
 export const PasswordPower = ({
   password,
@@ -10,6 +10,7 @@ export const PasswordPower = ({
   haveUpperCase,
   haveNumbers,
   haveSymbols,
+  setColorValidation,
 }: any) => {
   const {
     greenValidation,
@@ -17,12 +18,28 @@ export const PasswordPower = ({
     orangeValidation,
     redValidation,
     purpleValidation,
-  } = getValidations({
+  } = colorValidations({
     password,
     haveLowerCase,
     haveUpperCase,
     haveNumbers,
     haveSymbols,
+  });
+
+  useEffect(() => {
+    setColorValidation(
+      greenValidation
+        ? 'green'
+        : yellowValidation
+        ? 'yellow'
+        : orangeValidation
+        ? 'orange'
+        : redValidation
+        ? 'red'
+        : purpleValidation
+        ? 'purple'
+        : 'purple',
+    );
   });
 
   return !haveLowerCase && !haveUpperCase && !haveNumbers && !haveSymbols ? (
