@@ -1,6 +1,11 @@
 import React, {useState} from 'react';
 import {SafeAreaView, ScrollView, Text, View} from 'react-native';
-import {CheckBoxContainer, PasswordDetails, PasswordInput} from './components';
+import {
+  CheckBoxContainer,
+  PasswordDetails,
+  PasswordInput,
+  PasswordPower,
+} from './components';
 
 import {styles} from './styles';
 
@@ -20,10 +25,13 @@ const TestPass = () => {
         <View style={styles.content}>
           <View style={styles.section}>
             <Text style={styles.title}>SUA SENHA É SEGURA?</Text>
-            <Text style={styles.text}>
-              Digite no campo abaixo para descobrir em quanto tempo levaria para
-              você ser hackeado
-            </Text>
+            <PasswordPower
+              password={password}
+              haveLowerCase={haveLowerCase}
+              haveUpperCase={haveUpperCase}
+              haveNumbers={haveNumbers}
+              haveSymbols={haveSymbols}
+            />
           </View>
           <View style={styles.section}>
             <PasswordInput
