@@ -6,11 +6,11 @@ import {
   PasswordInput,
   PasswordPower,
   PasswordValidity,
-} from './components';
+} from './partials';
 
 import {styles} from './styles';
 
-const TestPass = () => {
+export const TestPass = () => {
   const [password, setPassword] = useState('');
   const [visibility, setVisibility] = useState(true);
   const [haveLowerCase, setHaveLowerCase] = useState(false);
@@ -77,5 +77,3 @@ const TestPass = () => {
     </SafeAreaView>
   );
 };
-
-export default TestPass;
