@@ -7,7 +7,7 @@ export const styles = StyleSheet.create({
     backgroundColor: 'black',
   },
   content: {
-    padding: '5%',
+    height: '100%',
     paddingTop: '10%',
   },
   section: {
@@ -15,9 +15,20 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: '7%',
+    paddingHorizontal: '5%',
   },
   footer: {
-    marginTop: '50%',
+    width: '100%',
+    position: 'absolute',
+    bottom: 10,
+  },
+  background: {
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height: '100%',
+    zIndex: -1,
   },
 
   // Text Styles

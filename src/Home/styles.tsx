@@ -6,22 +6,29 @@ export const styles = StyleSheet.create({
     height: '100%',
     backgroundColor: 'black',
   },
-  container: {
+  content: {
     height: '100%',
-    backgroundColor: 'black',
+    paddingTop: '10%',
   },
   section: {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: '7%',
-  },
-  content: {
-    padding: '5%',
-    paddingTop: '10%',
+    paddingHorizontal: '5%',
   },
   footer: {
-    marginTop: '50%',
+    width: '100%',
+    position: 'absolute',
+    bottom: 10,
+  },
+  background: {
+    position: 'absolute',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    height: '100%',
+    zIndex: -1,
   },
 
   // Text Styles

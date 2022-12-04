@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {Image, SafeAreaView, View} from 'react-native';
+import {Credits} from '../components';
 import {BackButton, PasswordPower} from './partials';
 
 import {styles} from './styles';
@@ -26,7 +27,12 @@ export const Battle = ({navigation, route}: any) => {
         </View>
 
         <View style={styles.footer}>
-          <Text style={styles.text}>Créditos do infográfico</Text>
+          <Credits />
+        </View>
+
+        <View style={styles.background}>
+          <Image source={require('../../assets/images/bg-top.png')} />
+          <Image source={require('../../assets/images/bg-bottom.png')} />
         </View>
       </View>
     </SafeAreaView>
