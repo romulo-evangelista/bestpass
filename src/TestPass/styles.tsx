@@ -3,6 +3,7 @@ import {StyleSheet} from 'react-native';
 export const styles = StyleSheet.create({
   // Containers Styles
   safeArea: {
+    height: '100%',
     backgroundColor: 'black',
   },
   container: {
@@ -17,7 +18,7 @@ export const styles = StyleSheet.create({
   },
   content: {
     padding: '5%',
-    paddingTop: '30%',
+    paddingTop: '10%',
   },
   footer: {
     marginTop: '50%',
@@ -26,8 +27,10 @@ export const styles = StyleSheet.create({
   // Text Styles
   title: {
     fontFamily: 'Staatliches',
-    fontSize: 44,
+    fontSize: 32,
+    textAlign: 'center',
     color: 'white',
+    paddingBottom: '5%',
   },
   text: {
     paddingTop: '3%',

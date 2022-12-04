@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextInput} from 'react-native';
+import {Image, TextInput, TouchableOpacity, View} from 'react-native';
 
 import {styles} from './styles';
 
@@ -7,6 +7,7 @@ export const PasswordInput = ({
   password,
   setPassword,
   visibility,
+  setVisibility,
   setHaveLowerCase,
   setHaveUpperCase,
   setHaveNumbers,
@@ -21,13 +22,29 @@ export const PasswordInput = ({
     setHaveSymbols(RegExp('[^A-z\\s\\d][\\\\^]?', 'g').test(text));
   };
 
+  const onMagicTap = () => {
+    setVisibility(!visibility);
+  };
+
   return (
-    <TextInput
-      value={password}
-      maxLength={18}
-      onChangeText={onChangeText}
-      secureTextEntry={visibility}
-      style={styles.password}
-    />
+    <View style={styles.container}>
+      <TextInput
+        value={password}
+        maxLength={18}
+        onChangeText={onChangeText}
+        secureTextEntry={visibility}
+        style={styles.password}
+        inlineImageLeft={'../../../../assets/images/icons/eye-open.png'}
+      />
+      <TouchableOpacity onPress={onMagicTap}>
+        <Image
+          source={
+            visibility
+              ? require('../../../../assets/images/icons/eye-open.png')
+              : require('../../../../assets/images/icons/eye-closed.png')
+          }
+        />
+      </TouchableOpacity>
+    </View>
   );
 };

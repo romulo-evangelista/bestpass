@@ -4,7 +4,6 @@ import {Text, View} from 'react-native';
 import {styles} from './styles';
 
 export const PasswordDetails = ({
-  password,
   haveLowerCase,
   haveUpperCase,
   haveNumbers,
@@ -12,23 +11,18 @@ export const PasswordDetails = ({
 }: any) => {
   return (
     <>
-      <Text style={styles.text}>
-        No momento a senha tem {password.length} caracteres e possui:
-      </Text>
+      <Text style={styles.text}>Você pode diversificar sua senha com:</Text>
       <View style={styles.details}>
-        <Text style={haveLowerCase ? styles.textHighlight : styles.text}>
+        <Text style={haveLowerCase ? styles.textHighlight : styles.textOption}>
           {haveLowerCase && '✓ '}Minúscula
         </Text>
-        <Text style={styles.text}> | </Text>
-        <Text style={haveUpperCase ? styles.textHighlight : styles.text}>
+        <Text style={haveUpperCase ? styles.textHighlight : styles.textOption}>
           {haveUpperCase && '✓ '}Maiúscula
         </Text>
-        <Text style={styles.text}> | </Text>
-        <Text style={haveNumbers ? styles.textHighlight : styles.text}>
+        <Text style={haveNumbers ? styles.textHighlight : styles.textOption}>
           {haveNumbers && '✓ '}Números
         </Text>
-        <Text style={styles.text}> | </Text>
-        <Text style={haveSymbols ? styles.textHighlight : styles.text}>
+        <Text style={haveSymbols ? styles.textHighlight : styles.textOption}>
           {haveSymbols && '✓ '}Símbolos
         </Text>
       </View>
