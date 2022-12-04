@@ -34,7 +34,6 @@ export const PasswordInput = ({
         onChangeText={onChangeText}
         secureTextEntry={visibility}
         style={styles.password}
-        inlineImageLeft={'../../../../assets/images/icons/eye-open.png'}
       />
       <TouchableOpacity onPress={onMagicTap}>
         <Image

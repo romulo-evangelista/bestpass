@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
 import {
+  PasswordButton,
   PasswordDetails,
   PasswordInput,
-  PasswordPower,
-  PasswordValidity,
+  // PasswordPower,
+  // PasswordValidity,
 } from './partials';
 
 import {styles} from './styles';
@@ -16,7 +17,7 @@ export const TestPass = () => {
   const [haveUpperCase, setHaveUpperCase] = useState(false);
   const [haveNumbers, setHaveNumbers] = useState(false);
   const [haveSymbols, setHaveSymbols] = useState(false);
-  const [colorValidation, setColorValidation] = useState('');
+  // const [colorValidation, setColorValidation] = useState('');
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -25,15 +26,26 @@ export const TestPass = () => {
           <Text style={styles.title}>
             Em Quanto tempo um Hacker QUEBRA sua senha?
           </Text>
-          <PasswordPower
+          <Text style={styles.text}>
+            Você já deve saber que é super importante ter uma senha segura, mas
+            existem estudos de quanto tempo hackers realmente precisam para
+            conseguir invadir sua segurança.
+          </Text>
+          <Text style={styles.text}>
+            Digite uma senha abaixo e descubra as chances que ela teria em um
+            embate contra o crime virtual. Nenhum dado será armazenado por aqui.
+          </Text>
+
+          {/* <PasswordPower
             password={password}
             haveLowerCase={haveLowerCase}
             haveUpperCase={haveUpperCase}
             haveNumbers={haveNumbers}
             haveSymbols={haveSymbols}
             setColorValidation={setColorValidation}
-          />
+          /> */}
         </View>
+
         <View style={styles.section}>
           <PasswordInput
             password={password}
@@ -48,8 +60,6 @@ export const TestPass = () => {
           <Text style={styles.text}>
             Sua senha pode ter no máximo 18 caracteres
           </Text>
-        </View>
-        <View style={styles.section}>
           <PasswordDetails
             password={password}
             haveLowerCase={haveLowerCase}
@@ -58,15 +68,14 @@ export const TestPass = () => {
             haveSymbols={haveSymbols}
           />
         </View>
-        {password.length > 0 ? (
-          <PasswordValidity color={colorValidation} />
-        ) : (
-          <View style={styles.footer}>
-            <Text style={styles.text}>
-              Sua senha nunca será armazenada por aqui!
-            </Text>
-          </View>
-        )}
+
+        <View style={styles.section}>
+          <PasswordButton />
+        </View>
+
+        <View style={styles.footer}>
+          <Text style={styles.text}>Créditos do infográfico</Text>
+        </View>
       </View>
     </SafeAreaView>
   );
