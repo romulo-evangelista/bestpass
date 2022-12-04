@@ -1,23 +1,16 @@
 import React, {useState} from 'react';
 import {SafeAreaView, Text, View} from 'react-native';
-import {
-  PasswordButton,
-  PasswordDetails,
-  PasswordInput,
-  // PasswordPower,
-  // PasswordValidity,
-} from './partials';
+import {PasswordButton, PasswordDetails, PasswordInput} from './partials';
 
 import {styles} from './styles';
 
-export const TestPass = ({}) => {
+export const Home = ({navigation}: any) => {
   const [password, setPassword] = useState('');
   const [visibility, setVisibility] = useState(true);
   const [haveLowerCase, setHaveLowerCase] = useState(false);
   const [haveUpperCase, setHaveUpperCase] = useState(false);
   const [haveNumbers, setHaveNumbers] = useState(false);
   const [haveSymbols, setHaveSymbols] = useState(false);
-  // const [colorValidation, setColorValidation] = useState('');
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -61,7 +54,14 @@ export const TestPass = ({}) => {
         </View>
 
         <View style={styles.section}>
-          <PasswordButton />
+          <PasswordButton
+            navigation={navigation}
+            password={password}
+            haveLowerCase={haveLowerCase}
+            haveUpperCase={haveUpperCase}
+            haveNumbers={haveNumbers}
+            haveSymbols={haveSymbols}
+          />
         </View>
 
         <View style={styles.footer}>

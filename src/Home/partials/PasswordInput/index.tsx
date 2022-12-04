@@ -39,8 +39,8 @@ export const PasswordInput = ({
         <Image
           source={
             visibility
-              ? require('../../../../assets/images/icons/eye-open.png')
-              : require('../../../../assets/images/icons/eye-closed.png')
+              ? require('../../../../assets/images/eye-open.png')
+              : require('../../../../assets/images/eye-closed.png')
           }
         />
       </TouchableOpacity>
