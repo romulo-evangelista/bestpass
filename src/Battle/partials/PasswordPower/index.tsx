@@ -1,8 +1,6 @@
 import React, {useEffect} from 'react';
-import {Image, View} from 'react-native';
 import {colorValidations} from '../../validations/colorValidations';
-
-import {styles} from './styles';
+import {Result} from './components';
 
 export const PasswordPower = ({
   password,
@@ -42,75 +40,53 @@ export const PasswordPower = ({
     );
   });
 
-  return !haveLowerCase && !haveUpperCase && !haveNumbers && !haveSymbols ? (
-    <></>
-  ) : greenValidation ? (
-    <View style={styles.container}>
-      <Image source={require('../../../../assets/images/green/heart.png')} />
-      <Image source={require('../../../../assets/images/green/heart.png')} />
-      <Image source={require('../../../../assets/images/green/heart.png')} />
-      <Image source={require('../../../../assets/images/green/heart.png')} />
-      <Image
-        source={require('../../../../assets/images/green/broken-heart.png')}
-      />
-    </View>
+  return greenValidation ? (
+    <Result
+      type="MUITO FORTE"
+      color="green"
+      time="100 mil anos"
+      description="Aqui você pode envitarTente evitar sequência de letras ou números e
+      até evitar palavras do dicionário do seu idioma."
+    />
   ) : yellowValidation ? (
-    <View style={styles.container}>
-      <Image source={require('../../../../assets/images/yellow/heart.png')} />
-      <Image source={require('../../../../assets/images/yellow/heart.png')} />
-      <Image source={require('../../../../assets/images/yellow/heart.png')} />
-      <Image
-        source={require('../../../../assets/images/yellow/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/yellow/broken-heart.png')}
-      />
-    </View>
+    <Result
+      type="INTERMEDIÁRIA"
+      color="yellow"
+      time="5 meses"
+      description="Você pode melhorar sua senha combinando caracteres em letras
+      maiúsculas, minúsculas, números e caracteres especiais. Tente evitar
+      sequência de letras ou números e até evitar palavras do dicionário do
+      seu idioma."
+    />
   ) : orangeValidation ? (
-    <View style={styles.container}>
-      <Image source={require('../../../../assets/images/orange/heart.png')} />
-      <Image source={require('../../../../assets/images/orange/heart.png')} />
-      <Image
-        source={require('../../../../assets/images/orange/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/orange/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/orange/broken-heart.png')}
-      />
-    </View>
+    <Result
+      type="FRACA"
+      color="orange"
+      time="5 dias"
+      description="Você pode melhorar sua senha combinando caracteres em letras
+      maiúsculas, minúsculas, números e caracteres especiais. Tente evitar
+      sequência de letras ou números e até evitar palavras do dicionário do
+      seu idioma."
+    />
   ) : redValidation || purpleValidation ? (
-    <View style={styles.container}>
-      <Image source={require('../../../../assets/images/red/heart.png')} />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-    </View>
+    <Result
+      type="MUITO FRACA"
+      color="red"
+      time="instatâneamente"
+      description="Você pode melhorar sua senha combinando caracteres em letras
+      maiúsculas, minúsculas, números e caracteres especiais. Tente evitar
+      sequência de letras ou números e até evitar palavras do dicionário do
+      seu idioma."
+    />
   ) : (
-    <View style={styles.container}>
-      <Image source={require('../../../../assets/images/red/heart.png')} />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-      <Image
-        source={require('../../../../assets/images/red/broken-heart.png')}
-      />
-    </View>
+    <Result
+      type="MUITO FRACA"
+      color="red"
+      time="instatâneamente"
+      description="Você pode melhorar sua senha combinando caracteres em letras
+      maiúsculas, minúsculas, números e caracteres especiais. Tente evitar
+      sequência de letras ou números e até evitar palavras do dicionário do
+      seu idioma."
+    />
   );
 };

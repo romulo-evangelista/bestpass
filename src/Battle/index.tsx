@@ -1,17 +1,16 @@
 import React, {useState} from 'react';
-import {Image, SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView, Text, View} from 'react-native';
 import {BackButton, PasswordPower} from './partials';
 
 import {styles} from './styles';
 
 export const Battle = ({navigation, route}: any) => {
-  const [colorValidation, setColorValidation] = useState('');
+  const [, setColorValidation] = useState('');
 
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.content}>
         <View style={styles.section}>
-          <Text style={styles.title}>SUA SENHA É MUITO FRACA</Text>
           <PasswordPower
             password={route.params.password}
             haveLowerCase={route.params.haveLowerCase}
@@ -20,20 +19,6 @@ export const Battle = ({navigation, route}: any) => {
             haveSymbols={route.params.haveSymbols}
             setColorValidation={setColorValidation}
           />
-        </View>
-
-        <View style={styles.section}>
-          <Image source={require('../../assets/images/placeholder.png')} />
-        </View>
-
-        <View style={styles.section}>
-          <Text style={styles.text}>Ela seria descoberta instatâneamente</Text>
-          <Text style={styles.text}>
-            Você pode melhorar sua senha combinando caracteres em letras
-            maiúsculas, minúsculas, números e caracteres especiais. Tente evitar
-            sequência de letras ou números e até evitar palavras do dicionário
-            do seu idioma.
-          </Text>
         </View>
 
         <View style={styles.section}>
