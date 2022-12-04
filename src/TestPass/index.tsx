@@ -10,7 +10,7 @@ import {
 
 import {styles} from './styles';
 
-export const TestPass = () => {
+export const TestPass = ({}) => {
   const [password, setPassword] = useState('');
   const [visibility, setVisibility] = useState(true);
   const [haveLowerCase, setHaveLowerCase] = useState(false);
@@ -35,15 +35,6 @@ export const TestPass = () => {
             Digite uma senha abaixo e descubra as chances que ela teria em um
             embate contra o crime virtual. Nenhum dado será armazenado por aqui.
           </Text>
-
-          {/* <PasswordPower
-            password={password}
-            haveLowerCase={haveLowerCase}
-            haveUpperCase={haveUpperCase}
-            haveNumbers={haveNumbers}
-            haveSymbols={haveSymbols}
-            setColorValidation={setColorValidation}
-          /> */}
         </View>
 
         <View style={styles.section}>
