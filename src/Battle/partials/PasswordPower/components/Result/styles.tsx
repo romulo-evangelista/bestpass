@@ -4,6 +4,7 @@ export const styles = StyleSheet.create({
   container: {
     display: 'flex',
     alignItems: 'center',
+    width: '100%',
   },
   textContainer: {
     display: 'flex',
