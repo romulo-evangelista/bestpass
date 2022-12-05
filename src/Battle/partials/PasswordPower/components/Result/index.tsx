@@ -1,6 +1,7 @@
 import React from 'react';
-import {Image, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
 import {Hearts} from '../Hearts';
+import {Illustration} from '../Illustration';
 
 import {styles} from './styles';
 
@@ -9,11 +10,7 @@ export const Result = ({type, color, time, description}: any) => {
     <View style={styles.container}>
       <Hearts type={type} color={color} />
 
-      <View style={styles.section}>
-        <Image
-          source={require('../../../../../../assets/images/placeholder.png')}
-        />
-      </View>
+      <Illustration color={color} />
 
       <View style={styles.section}>
         <View style={styles.textContainer}>

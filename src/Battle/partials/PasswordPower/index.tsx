@@ -28,8 +28,7 @@ export const PasswordPower = ({
       type="MUITO FORTE"
       color="light-green"
       time="100 mil anos"
-      description="Aqui você pode envitarTente evitar sequência de letras ou números e
-      até evitar palavras do dicionário do seu idioma."
+      description="Parabéns você tem uma senha campeã. Se quiser continuar melhorando sua senha, tente evitar sequência de letras ou números e até evitar palavras do dicionário do seu idioma, caso não tenha feito ainda."
     />
   ) : greenValidation ? (
     <Result
