@@ -5,7 +5,7 @@ export const colorValidations = ({
   haveNumbers,
   haveSymbols,
 }: any) => {
-  const greenValidation =
+  const lightGreenValidation =
     (password?.length >= 18 &&
       haveNumbers &&
       haveLowerCase &&
@@ -27,7 +27,7 @@ export const colorValidations = ({
       haveUpperCase &&
       haveSymbols);
 
-  const yellowValidation =
+  const greenValidation =
     (password?.length >= 14 &&
       password?.length <= 17 &&
       haveNumbers &&
@@ -53,7 +53,7 @@ export const colorValidations = ({
       haveUpperCase &&
       haveSymbols);
 
-  const orangeValidation =
+  const yellowValidation =
     (password?.length >= 16 &&
       password?.length <= 18 &&
       haveNumbers &&
@@ -85,7 +85,7 @@ export const colorValidations = ({
       haveUpperCase &&
       haveSymbols);
 
-  const redValidation =
+  const orangeValidation =
     (password?.length >= 11 &&
       password?.length <= 15 &&
       haveNumbers &&
@@ -117,7 +117,7 @@ export const colorValidations = ({
       haveUpperCase &&
       haveSymbols);
 
-  const purpleValidation =
+  const redValidation =
     (password?.length <= 10 &&
       haveNumbers &&
       !haveLowerCase &&
@@ -145,11 +145,11 @@ export const colorValidations = ({
       haveSymbols);
 
   return {
+    lightGreenValidation,
     greenValidation,
     yellowValidation,
     orangeValidation,
     redValidation,
-    purpleValidation,
   };
 };
 

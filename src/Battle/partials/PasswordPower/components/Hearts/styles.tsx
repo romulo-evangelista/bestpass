@@ -22,6 +22,13 @@ export const styles = StyleSheet.create({
     color: 'white',
     paddingBottom: '5%',
   },
+  titleLightGreen: {
+    fontFamily: 'Staatliches',
+    fontSize: 32,
+    textAlign: 'center',
+    color: '#62EAB9',
+    paddingBottom: '5%',
+  },
   titleGreen: {
     fontFamily: 'Staatliches',
     fontSize: 32,

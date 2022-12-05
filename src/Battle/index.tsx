@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {Image, SafeAreaView, View} from 'react-native';
 import {Credits} from '../components';
 import {BackButton, PasswordPower} from './partials';
@@ -6,8 +6,6 @@ import {BackButton, PasswordPower} from './partials';
 import {styles} from './styles';
 
 export const Battle = ({navigation, route}: any) => {
-  const [, setColorValidation] = useState('');
-
   return (
     <SafeAreaView style={styles.safeArea}>
       <View style={styles.content}>
@@ -18,7 +16,6 @@ export const Battle = ({navigation, route}: any) => {
             haveUpperCase={route.params.haveUpperCase}
             haveNumbers={route.params.haveNumbers}
             haveSymbols={route.params.haveSymbols}
-            setColorValidation={setColorValidation}
           />
         </View>
 

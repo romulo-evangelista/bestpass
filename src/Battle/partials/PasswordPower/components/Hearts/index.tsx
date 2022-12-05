@@ -4,7 +4,31 @@ import {Image, Text, View} from 'react-native';
 import {styles} from './styles';
 
 export const Hearts = ({type, color}: any) => {
-  return color === 'green' ? (
+  return color === 'light-green' ? (
+    <>
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>SUA SENHA É </Text>
+        <Text style={styles.titleLightGreen}> {type}</Text>
+      </View>
+      <View style={styles.imageContainer}>
+        <Image
+          source={require('../../../../../../assets/images/green/light/heart.png')}
+        />
+        <Image
+          source={require('../../../../../../assets/images/green/light/heart.png')}
+        />
+        <Image
+          source={require('../../../../../../assets/images/green/light/heart.png')}
+        />
+        <Image
+          source={require('../../../../../../assets/images/green/light/heart.png')}
+        />
+        <Image
+          source={require('../../../../../../assets/images/green/light/heart.png')}
+        />
+      </View>
+    </>
+  ) : color === 'green' ? (
     <>
       <View style={styles.textContainer}>
         <Text style={styles.title}>SUA SENHA É </Text>
@@ -24,7 +48,7 @@ export const Hearts = ({type, color}: any) => {
           source={require('../../../../../../assets/images/green/heart.png')}
         />
         <Image
-          source={require('../../../../../../assets/images/green/heart.png')}
+          source={require('../../../../../../assets/images/green/broken-heart.png')}
         />
       </View>
     </>
