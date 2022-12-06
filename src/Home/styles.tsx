@@ -8,7 +8,9 @@ export const styles = StyleSheet.create({
   },
   content: {
     height: '100%',
-    paddingTop: '10%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
   section: {
     width: '100%',
@@ -19,8 +21,6 @@ export const styles = StyleSheet.create({
   },
   footer: {
     width: '100%',
-    position: 'absolute',
-    bottom: 10,
   },
   background: {
     position: 'absolute',
