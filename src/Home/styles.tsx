@@ -4,6 +4,8 @@ export const styles = StyleSheet.create({
   // Containers Styles
   safeArea: {
     height: '100%',
+    display: 'flex',
+    alignItems: 'center',
     backgroundColor: 'black',
   },
   content: {
@@ -11,12 +13,12 @@ export const styles = StyleSheet.create({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingTop: '20%',
   },
   section: {
     width: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: '7%',
     paddingHorizontal: '5%',
   },
   footer: {

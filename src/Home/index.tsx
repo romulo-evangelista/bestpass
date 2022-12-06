@@ -68,11 +68,11 @@ export const Home = ({navigation}: any) => {
         <View style={styles.footer}>
           <Credits />
         </View>
+      </View>
 
-        <View style={styles.background}>
-          <Image source={require('../../assets/images/bg-top.png')} />
-          <Image source={require('../../assets/images/bg-bottom.png')} />
-        </View>
+      <View style={styles.background}>
+        <Image source={require('../../assets/images/bg-top.png')} />
+        <Image source={require('../../assets/images/bg-bottom.png')} />
       </View>
     </SafeAreaView>
   );
